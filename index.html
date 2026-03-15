@@ -1,275 +1,362 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="scroll-smooth">
+<html lang="pt-BR">
 <head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AJA | Disciplina & Mente Forte</title>
-    <link rel="icon" type="image/png" href="logoaja.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Heleneide Gessel | Advocacia de Elite</title>
     
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'SEU_PIXEL_AQUI'); 
-    fbq('track', 'PageView');
-    </script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Montserrat:wght@300;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
     <style>
         :root {
-            --gold: #D4AF37;
-            --dark: #000000;
-        }
-        body { font-family: 'Inter', sans-serif; background: var(--dark); color: white; overflow-x: hidden; }
-        .serif { font-family: 'Playfair Display', serif; }
-        
-        .reveal { opacity: 0; transform: translateY(40px); transition: all 1s cubic-bezier(0.23, 1, 0.32, 1); }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-
-        .gold-text { color: var(--gold); }
-        .bg-gold { background-color: var(--gold); }
-        
-        .btn-shine {
-            position: relative;
-            overflow: hidden;
-            transition: all 0.4s ease;
-        }
-        .btn-shine::after {
-            content: "";
-            position: absolute;
-            top: -50%;
-            left: -60%;
-            width: 20%;
-            height: 200%;
-            background: rgba(255, 255, 255, 0.4);
-            transform: rotate(30deg);
-            animation: shine 3s infinite;
-        }
-        @keyframes shine {
-            0% { left: -60%; }
-            20% { left: 120%; }
-            100% { left: 120%; }
+            --primary: #FFFFFF;
+            --secondary: #0A0A0A;
+            --accent: #D4AF37; /* Tom dourado sutil para autoridade */
+            --glass: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.12);
+            --font-main: 'DM Sans', sans-serif;
+            --font-title: 'Montserrat', sans-serif;
         }
 
-        /* MODAL OTIMIZADO - MAIOR E MAIS BONITO */
-        .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95); backdrop-filter: blur(15px); z-index: 100; align-items: center; justify-content: center; }
-        .modal-content { 
-            background: #0a0a0a; 
-            border: 1px solid rgba(212, 175, 55, 0.3); 
-            padding: 3.5rem; /* Aumentado */
-            border-radius: 2rem; 
-            max-width: 550px; /* Aumentado */
-            width: 90%; 
-            box-shadow: 0 0 50px rgba(212, 175, 55, 0.1);
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         
-        input { 
-            background: rgba(255,255,255,0.07); 
-            border: 1px solid rgba(255,255,255,0.1); 
-            padding: 18px; /* Maior */
-            border-radius: 12px; 
-            color: white; 
-            outline: none; 
-            transition: 0.3s; 
-            width: 100%; 
-            font-size: 1.1rem; /* Letras maiores */
+        body {
+            font-family: var(--font-main);
+            background-color: #000;
+            color: var(--primary);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            overflow-x: hidden;
         }
-        input:focus { border-color: var(--gold); background: rgba(255,255,255,0.1); }
 
-        .apple-card {
+        .bg-image {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop') no-repeat center center;
+            background-size: cover;
+            z-index: -1;
+        }
+
+        .bg-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at center, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.95) 100%);
+            z-index: -1;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            padding: 40px 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 10;
+        }
+
+        /* --- LOGO --- */
+        .logo-wrapper {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo-container {
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .logo-container img {
+            width: 160px;
+            height: auto;
+            /* Removido o filter invert para que a logo apareça na cor original. 
+               Se sua logo for preta e o fundo escuro, mude para: filter: brightness(0) invert(1); */
+            display: block;
+        }
+
+        .office-name {
+            font-family: var(--font-title);
+            font-size: 0.7rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font-weight: 400;
+            color: var(--accent);
+        }
+
+        /* --- BOTÕES --- */
+        .links-column {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .modern-btn {
+    position: relative;
+    background: #656a4a;
+    border: 1px solid #656a4a;
+    padding: 20px 25px;
+    text-decoration: none;
+    color: #e6d8a8; /* dourado elegante */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+                color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+                border-color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    backdrop-filter: blur(10px);
+}
+
+
+        .modern-btn:hover {
+            background: var(--primary);
+            color: #000;
+            transform: translateY(-3px);
+        }
+
+        .btn-label {
+            font-family: var(--font-title);
+            font-weight: 600;
+            font-size: 0.8rem;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+
+        /* --- FORMULÁRIO --- */
+        .form-card {
+            margin-top: 20px;
+            padding: 35px 25px;
+            width: 100%;
             background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            border: 1px solid var(--border);
+            border-radius: 4px;
         }
-        .apple-card:hover {
-            background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(212, 175, 55, 0.3);
-            transform: translateY(-10px);
+
+        .form-header {
+            font-family: var(--font-title);
+            font-size: 0.85rem;
+            text-align: center;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        input, select {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--border);
+            padding: 12px 5px;
+            color: #fff;
+            font-family: var(--font-main);
+            font-size: 0.95rem;
+            outline: none;
+        }
+
+        select option { background: #111; color: #fff; }
+
+        input:focus, select:focus {
+            border-bottom-color: var(--accent);
+        }
+
+        .submit-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 20px;
+    background: #656a4a;
+    color: #ffffff;
+    border: none;
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+        /* --- BOTÃO FLUTUANTE SHARE --- */
+        .share-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--glass);
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(143, 164, 58);
+            text-decoration: none;
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            transition: 0.3s;
+        }
+
+        .share-float:hover {
+            background: #25D366;
+            border-color: #25D366;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            opacity: 0.5;
+            padding-bottom: 40px;
+        }
+
+        .footer-info {
+            font-size: 0.4rem;
+            letter-spacing: 2px;
+            line-height: 2.2;
         }
     </style>
 </head>
 <body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <nav class="fixed w-full z-40 bg-black/70 backdrop-blur-xl border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
-            <div class="text-2xl font-bold tracking-tighter uppercase">
-                <span class="text-white">A</span><span class="gold-text">JA</span>
-            </div>
-            <button onclick="openModal('howItWorks')" class="text-xs tracking-[0.2em] uppercase hover:gold-text transition font-semibold">Como Funciona</button>
-        </div>
-    </nav>
+    <div class="bg-image"></div>
+    <div class="bg-overlay"></div>
 
-    <section class="pt-52 pb-32 px-6 text-center">
-        <div class="reveal max-w-4xl mx-auto">
-            <h1 class="serif text-6xl md:text-8xl mb-8 leading-[1.1]">Ação é o segredo da <span class="gold-text italic">Riqueza.</span></h1>
-            <p class="text-gray-400 text-lg md:text-xl mb-12 font-light max-w-2xl mx-auto">Engenharia comportamental via WhatsApp. Destrua a procrastinação com disciplina bíblica e IA.</p>
-            <div class="flex flex-col md:flex-row gap-6 justify-center">
-                <button onclick="openModal('leadForm')" class="btn-shine bg-gold text-black font-bold py-5 px-14 rounded-full text-sm uppercase tracking-widest">COMEÇAR AGORA</button>
-                <button onclick="openModal('howItWorks')" class="border border-white/10 py-5 px-14 rounded-full hover:bg-white/5 transition text-sm uppercase tracking-widest">O Método</button>
+    <div class="container">
+        <header class="logo-wrapper">
+            <div class="logo-container">
+                <img src="logo.png" alt="Gessel Advocacia" onerror="this.src='https://via.placeholder.com/200x80/000000/FFFFFF?text=GESSEL+ADVOCACIA'">
             </div>
-        </div>
-    </section>
+            <div class="office-name">Heleneide Pinto Advocacia e Consultoria Jurídica</div>
+        </header>
 
-    <section class="pt-32 pb-16 px-6 max-w-7xl mx-auto">
-        <div class="text-center mb-20 reveal">
-            <h2 class="serif text-4xl md:text-5xl mb-4">O Ecossistema <span class="gold-text text-white text-3xl">A</span><span class="gold-text text-3xl">JA</span></h2>
-            <p class="text-gray-500 italic">Alta performance para mentes inabaláveis.</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="apple-card p-10 rounded-3xl reveal">
-                <div class="text-gold mb-6 text-3xl">01</div>
-                <h3 class="text-xl font-semibold mb-4 text-white uppercase tracking-wider">Frequências de Áudio</h3>
-                <p class="text-gray-400 font-light text-sm leading-relaxed">Áudios neurais para alinhar sua vibração com a frequência da abundância e foco total.</p>
-            </div>
-            <div class="apple-card p-10 rounded-3xl reveal">
-                <div class="text-gold mb-6 text-3xl">02</div>
-                <h3 class="text-xl font-semibold mb-4 text-white uppercase tracking-wider">Sabedoria de Salomão</h3>
-                <p class="text-gray-400 font-light text-sm leading-relaxed">Princípios bíblicos aplicados à gestão financeira e prosperidade moderna.</p>
-            </div>
-            <div class="apple-card p-10 rounded-3xl reveal">
-                <div class="text-gold mb-6 text-3xl">03</div>
-                <h3 class="text-xl font-semibold mb-4 text-white uppercase tracking-wider">Anti-Ansiedade</h3>
-                <p class="text-gray-400 font-light text-sm leading-relaxed">Intervenções imediatas via IA para momentos de estresse e paralisia mental.</p>
-            </div>
-            <div class="apple-card p-10 rounded-3xl reveal">
-                <div class="text-gold mb-6 text-3xl">04</div>
-                <h3 class="text-xl font-semibold mb-4 text-white uppercase tracking-wider">Mente Disciplinada</h3>
-                <p class="text-gray-400 font-light text-sm leading-relaxed">Rituais matinais e noturnos automáticos para garantir a execução do seu dia.</p>
-            </div>
-            <div class="apple-card p-10 rounded-3xl reveal">
-                <div class="text-gold mb-6 text-3xl">05</div>
-                <h3 class="text-xl font-semibold mb-4 text-white uppercase tracking-wider">Lei da Atração</h3>
-                <p class="text-gray-400 font-light text-sm leading-relaxed">Reprogramação do subconsciente com afirmações de impacto e alto valor.</p>
-            </div>
-            <div class="apple-card p-10 rounded-3xl reveal">
-                <div class="text-gold mb-6 text-3xl">06</div>
-                <h3 class="text-xl font-semibold mb-4 text-white uppercase tracking-wider">Suporte VIP IA</h3>
-                <p class="text-gray-400 font-light text-sm leading-relaxed">Uma inteligência disponível 24h no seu WhatsApp para tirar você da inércia.</p>
+        <div class="links-column">
+            <a href="https://wa.me/5521996201094" class="modern-btn" target="_blank" onclick="fbq('track', 'Contact')">
+                <span class="btn-label">Falar com Especialista</span>
+                <i class="ph ph-whatsapp-logo"></i>
+            </a>
+
+            <div class="form-card">
+                <div class="form-header">ANÁLISE DE CASO PRIORITÁRIA</div>
+                <form id="leadForm">
+                    <div class="input-group">
+                        <input type="text" id="name" placeholder="NOME COMPLETO" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="tel" id="phone" placeholder="WHATSAPP (DDD)" required>
+                    </div>
+                    <div class="input-group">
+                        <select id="subject" required>
+                            <option value="" disabled selected>ASSUNTO DE INTERESSE</option>
+                            <option value="Divórcio / Separação">Divórcio ou Separação</option>
+                            <option value="Pensão Alimentícia">Pensão Alimentícia</option>
+                            <option value="Inventário / Herança">Inventário ou Herança</option>
+                            <option value="Guarda de Menores">Guarda de Menores</option>
+                            <option value="Outros Assuntos">Outros Assuntos</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-btn" id="btnSubmit">ENVIAR E INICIAR NO WHATSAPP</button>
+                </form>
             </div>
         </div>
-    </section>
 
-    <section class="py-24 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20">
-
-        <div class="reveal flex flex-col justify-center">
-
-            <h2 class="serif text-4xl mb-6 italic">O fim da procrastinação.</h2>
-
-            <p class="text-gray-400 leading-relaxed mb-6">Nossa IA envia comandos específicos de áudio e texto baseados em Provérbios e princípios de alta performance nos momentos críticos do seu dia.</p>
-
-            <ul class="space-y-4">
-
-                <li class="flex items-center gap-3"><span class="gold-text">✦</span> Áudios de autoafirmação e lei da atração</li>
-
-                <li class="flex items-center gap-3"><span class="gold-text">✦</span> Combate imediato à ansiedade</li>
-
-            </ul>
-
-        </div>
-
-        <div class="reveal bg-gradient-to-tr from-zinc-900 to-black h-80 rounded-2xl border border-white/5 flex items-center justify-center">
-
-            <span class="gold-text text-6xl">AJA</span>
-
-        </div>
-
-    </section>
-
-
-    <div id="howItWorks" class="modal" onclick="closeModal('howItWorks')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <h3 class="serif text-4xl mb-8 gold-text text-center italic">O Método AJA</h3>
-            <div class="text-gray-300 space-y-6 text-lg leading-relaxed">
-                <p class="border-l-2 border-gold pl-4"><strong>Passo 1:</strong> Você preenche o perfil de mentalidade.</p>
-                <p class="border-l-2 border-gold pl-4"><strong>Passo 2:</strong> Nossa IA personaliza seu cronograma de áudios e comandos.</p>
-                <p class="border-l-2 border-gold pl-4"><strong>Passo 3:</strong> O WhatsApp vira sua central de poder e disciplina diária.</p>
+        <footer>
+            <div class="footer-info">
+                OAB-RJ 174312<br>
+                ESTRATÉGIA JURÍDICA PERSONALIZADA<br>
+                ©2026 HELENEIDE
             </div>
-            <button onclick="closeModal('howItWorks')" class="mt-10 w-full py-4 text-xs uppercase tracking-[0.3em] text-gray-500 font-bold hover:text-white transition">Fechar Janela</button>
-        </div>
+        </footer>
     </div>
 
-    <div id="leadForm" class="modal">
-        <div class="modal-content">
-            <h3 class="serif text-4xl mb-4 gold-text text-center italic text-white">A<span class="gold-text">JA</span> Agora</h3>
-            <p class="text-gray-500 text-center mb-10 text-xs uppercase tracking-[0.3em] font-bold">Inicie seu Protocolo de Elite</p>
-            <form id="webhookForm" class="space-y-6">
-                <input type="text" id="name" placeholder="Nome Completo" required>
-                <input type="tel" id="whatsapp" placeholder="Seu WhatsApp com DDD" required>
-                <button type="submit" class="btn-shine bg-gold text-black font-black py-5 w-full rounded-2xl mt-4 uppercase text-sm tracking-[0.2em]">Ativar Protocolo de Ação</button>
-            </form>
-            <button onclick="closeModal('leadForm')" class="mt-8 w-full text-xs text-gray-600 uppercase tracking-widest hover:text-gray-400 transition">Voltar</button>
-        </div>
-    </div>
-
-    <footer class="bg-black border-t border-white/5 pt-24 pb-12 px-8">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 mb-20">
-            <div class="text-center md:text-left">
-                <div class="text-4xl font-bold mb-6 italic text-white">A<span class="gold-text">JA</span></div>
-                <p class="text-gray-500 text-base leading-relaxed max-w-sm">A plataforma definitiva para quem busca o topo da pirâmide através da disciplina e alinhamento espiritual.</p>
-            </div>
-            <div class="flex flex-col items-center md:items-end justify-center">
-                <h4 class="text-white text-[10px] font-black uppercase tracking-[0.4em] mb-6">Conecte-se com a Elite</h4>
-                <div class="flex gap-10">
-                    <a href="https://instagram.com/seuusuario" target="_blank" rel="noopener" class="text-gray-500 text-xs hover:text-gold transition font-bold tracking-[0.2em]">INSTAGRAM</a>
-                    <a href="https://youtube.com/seucanal" target="_blank" rel="noopener" class="text-gray-500 text-xs hover:text-gold transition font-bold tracking-[0.2em]">YOUTUBE</a>
-                </div>
-            </div>
-        </div>
-        <div class="max-w-7xl mx-auto border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-700 uppercase tracking-[0.3em] font-bold">
-            <p>&copy; 2026 AJA - High Performance Systems</p>
-            <p>Built for the 1% Elite</p>
-        </div>
-    </footer>
+    <a href="#" class="share-float" id="shareBtn" title="Compartilhar">
+        <i class="ph ph-share-network" style="font-size: 1.5rem;"></i>
+    </a>
 
     <script>
-        const observerOptions = { threshold: 0.15 };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('active');
-            });
-        }, observerOptions);
+        // --- CONFIGURAÇÕES ---
+        const CONFIG = {
+            whatsappNumber: '5521992506306',
+            webhookUrl: 'SUA_URL_DO_N8N_OU_APPSCRIPT',
+            pixelId: 'SEU_PIXEL_ID'
+        };
 
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        // Máscara Simples para Telefone
+        document.getElementById('phone').addEventListener('input', function (e) {
+            let x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
+            e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+        });
 
-        function openModal(id) { 
-            document.getElementById(id).style.display = 'flex';
-            if(id === 'leadForm') fbq('track', 'LeadInProcess'); 
-        }
-        function closeModal(id) { document.getElementById(id).style.display = 'none'; }
-
-        document.getElementById('webhookForm').addEventListener('submit', async (e) => {
+        // Lógica do Formulário
+        document.getElementById('leadForm').addEventListener('submit', async (e) => {
             e.preventDefault();
-            const name = document.getElementById('name').value;
-            const whatsapp = document.getElementById('whatsapp').value;
             
-            const n8nWebhook = "https://projeto-automacoes-n8n.yek85i.easypanel.host/webhook/AJA"; 
+            const btn = document.getElementById('btnSubmit');
+            const nome = document.getElementById('name').value;
+            const fone = document.getElementById('phone').value;
+            const assunto = document.getElementById('subject').value;
 
-            fbq('track', 'Lead', { content_name: 'Inscrição AJA', value: 97.00, currency: 'BRL' });
+            btn.disabled = true;
+            btn.innerText = "REGISTRANDO...";
 
+            const payload = {
+                nome,
+                whatsapp: fone,
+                assunto,
+                origem: window.location.href,
+                data: new Date().toLocaleString('pt-BR')
+            };
+
+            // 1. Enviar para Webhook (n8n / Google App Script)
             try {
-                fetch(n8nWebhook, {
+                await fetch(CONFIG.webhookUrl, {
                     method: 'POST',
+                    mode: 'no-cors', // Para evitar erros de CORS se o servidor não estiver configurado
                     headers: { 'Content-Type': 'application/json' },
-                    mode: 'no-cors', 
-                    body: JSON.stringify({ 
-                        nome: name, 
-                        contato: whatsapp,
-                        timestamp: new Date().toISOString()
-                    })
+                    body: JSON.stringify(payload)
                 });
-            } catch (err) { console.log("Erro n8n: ", err); }
+            } catch (err) { console.log("Erro webhook, seguindo para WhatsApp..."); }
 
-            const zapMsg = encodeURIComponent(`Olá! Sou ${name}. Acabei de entrar no AJA e quero começar minha transformação agora!`);
+            // 2. Rastreamento (Pixel e GTM)
+            if(typeof fbq !== 'undefined') fbq('track', 'Lead', { content_name: assunto });
+            if(typeof dataLayer !== 'undefined') dataLayer.push({'event': 'form_submission', 'subject': assunto});
+
+            // 3. Redirecionar para WhatsApp
+            const msgZap = `Olá, Dra. Heleneide. Me chamo ${nome}. Gostaria de uma análise sobre: *${assunto}*.`;
+            const wpUrl = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(msgZap)}`;
+            
             setTimeout(() => {
-                window.location.href = `https://wa.me/55${whatsapp.replace(/\D/g,'')}?text=${zapMsg}`;
+                window.location.href = wpUrl;
             }, 500);
         });
+
+        // Lógica de Compartilhamento
+        document.getElementById('shareBtn').addEventListener('click', (e) => {
+            e.preventDefault();
+            const text = "Conheça Gessel Advocacia - Especialista em Direito de Família:";
+            const url = window.location.href;
+            window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text + " " + url)}`, '_blank');
+        });
+    </script>
+
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', CONFIG.pixelId);
+        fbq('track', 'PageView');
     </script>
 </body>
 </html>

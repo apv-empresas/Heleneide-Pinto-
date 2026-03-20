@@ -1,363 +1,1964 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Heleneide Gessel | Advocacia de Elite</title>
-    <link rel="icon" type="image/png" href="logo.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relatório Premium de Resultados | Heleneide Advocacia</title>
+  <meta name="description" content="Landing page premium de demonstração de resultados para Heleneide Advocacia, com métricas, evolução, análises e próximos passos em tráfego pago e posicionamento digital." />
+  <style>
+    :root {
+      --bg: #050805;
+      --bg-soft: #0b110b;
+      --surface: rgba(15, 23, 15, 0.72);
+      --surface-strong: rgba(19, 30, 20, 0.88);
+      --stroke: rgba(163, 255, 191, 0.16);
+      --stroke-strong: rgba(163, 255, 191, 0.28);
+      --text: #eef7ef;
+      --muted: #9caf9d;
+      --green: #a3ffbf;
+      --green-2: #72f39b;
+      --green-3: #34d46d;
+      --green-deep: #12321c;
+      --danger: #ffb37a;
+      --shadow: 0 24px 80px rgba(0,0,0,0.45);
+      --radius-xl: 32px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --max: 1240px;
+    }
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Montserrat:wght@300;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    * { box-sizing: border-box; }
 
-    <style>
-        :root {
-            --primary: #FFFFFF;
-            --secondary: #0A0A0A;
-            --accent: #D4AF37; /* Tom dourado sutil para autoridade */
-            --glass: rgba(255, 255, 255, 0.03);
-            --border: rgba(255, 255, 255, 0.12);
-            --font-main: 'DM Sans', sans-serif;
-            --font-title: 'Montserrat', sans-serif;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-        
-        body {
-            font-family: var(--font-main);
-            background-color: #000;
-            color: var(--primary);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            overflow-x: hidden;
-        }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(114, 243, 155, 0.14), transparent 26%),
+        radial-gradient(circle at 85% 12%, rgba(163, 255, 191, 0.10), transparent 18%),
+        linear-gradient(180deg, #030503 0%, #050805 24%, #060a07 60%, #040604 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
 
-        .bg-image {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop') no-repeat center center;
-            background-size: cover;
-            z-index: -1;
-        }
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      inset: auto;
+      width: 460px;
+      height: 460px;
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+    }
 
-        .bg-overlay {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle at center, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.95) 100%);
-            z-index: -1;
-        }
+    body::before {
+      top: -120px;
+      right: -140px;
+      background: rgba(114, 243, 155, 0.08);
+    }
 
-        .container {
-            width: 100%;
-            max-width: 480px;
-            padding: 40px 25px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            z-index: 10;
-        }
+    body::after {
+      bottom: -140px;
+      left: -160px;
+      background: rgba(163, 255, 191, 0.06);
+    }
 
-        /* --- LOGO --- */
-        .logo-wrapper {
-            width: 100%;
-            text-align: center;
-            margin-bottom: 40px;
-        }
+    .page {
+      position: relative;
+      z-index: 1;
+    }
 
-        .logo-container {
-            display: inline-block;
-            margin-bottom: 15px;
-        }
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
 
-        .logo-container img {
-            width: 160px;
-            height: auto;
-            /* Removido o filter invert para que a logo apareça na cor original. 
-               Se sua logo for preta e o fundo escuro, mude para: filter: brightness(0) invert(1); */
-            display: block;
-        }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(18px);
+      background: rgba(5, 8, 5, 0.55);
+      border-bottom: 1px solid rgba(163, 255, 191, 0.08);
+    }
 
-        .office-name {
-            font-family: var(--font-title);
-            font-size: 0.7rem;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            font-weight: 400;
-            color: var(--accent);
-        }
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      min-height: 76px;
+    }
 
-        /* --- BOTÕES --- */
-        .links-column {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
 
-        .modern-btn {
-    position: relative;
-    background: #656a4a;
-    border: 1px solid #656a4a;
-    padding: 20px 25px;
-    text-decoration: none;
-    color: #e6d8a8; /* dourado elegante */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: background-color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
-                color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
-                border-color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    backdrop-filter: blur(10px);
-}
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: linear-gradient(145deg, rgba(163, 255, 191, 0.24), rgba(52, 212, 109, 0.12));
+      border: 1px solid rgba(163, 255, 191, 0.22);
+      display: grid;
+      place-items: center;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 10px 24px rgba(15, 42, 21, 0.35);
+      color: var(--green);
+      font-size: 15px;
+    }
 
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      margin-top: 2px;
+    }
 
-        .modern-btn:hover {
-            background: var(--primary);
-            color: #000;
-            transform: translateY(-3px);
-        }
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
+    }
 
-        .btn-label {
-            font-family: var(--font-title);
-            font-weight: 600;
-            font-size: 0.8rem;
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
-        }
+    .nav a {
+      text-decoration: none;
+      color: var(--muted);
+      border: 1px solid transparent;
+      padding: 10px 14px;
+      border-radius: 999px;
+      transition: 0.24s ease;
+      font-size: 14px;
+    }
 
-        /* --- FORMULÁRIO --- */
-        .form-card {
-            margin-top: 20px;
-            padding: 35px 25px;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border);
-            border-radius: 4px;
-        }
+    .nav a:hover {
+      color: var(--text);
+      border-color: rgba(163, 255, 191, 0.14);
+      background: rgba(163, 255, 191, 0.05);
+    }
 
-        .form-header {
-            font-family: var(--font-title);
-            font-size: 0.85rem;
-            text-align: center;
-            margin-bottom: 25px;
-            letter-spacing: 2px;
-            font-weight: 600;
-            color: var(--primary);
-        }
+    section {
+      padding: 38px 0;
+    }
 
-        .input-group {
-            margin-bottom: 20px;
-        }
+    .hero {
+      padding-top: 48px;
+      padding-bottom: 30px;
+    }
 
-        input, select {
-            width: 100%;
-            background: transparent;
-            border: none;
-            border-bottom: 1px solid var(--border);
-            padding: 12px 5px;
-            color: #fff;
-            font-family: var(--font-main);
-            font-size: 0.95rem;
-            outline: none;
-        }
+    .hero-shell {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      align-items: stretch;
+    }
 
-        select option { background: #111; color: #fff; }
+    .hero-card,
+    .glass {
+      background: linear-gradient(180deg, rgba(18, 27, 19, 0.85), rgba(11, 17, 11, 0.65));
+      border: 1px solid var(--stroke);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
 
-        input:focus, select:focus {
-            border-bottom-color: var(--accent);
-        }
+    .hero-card::before,
+    .glass::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(163, 255, 191, 0.07), transparent 30%, transparent 70%, rgba(163,255,191,0.04));
+      pointer-events: none;
+    }
 
-        .submit-btn {
-    width: 100%;
-    margin-top: 15px;
-    padding: 20px;
-    background: #656a4a;
-    color: #ffffff;
-    border: none;
-    font-family: var(--font-title);
-    font-weight: 700;
-    font-size: 0.85rem;
-    letter-spacing: 2px;
-    cursor: pointer;
-    transition: 0.3s;
-    text-transform: uppercase;
-}
+    .hero-card {
+      padding: 34px;
+      min-height: 560px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
-        /* --- BOTÃO FLUTUANTE SHARE --- */
-        .share-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            background: var(--glass);
-            border: 1px solid var(--border);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgb(143, 164, 58);
-            text-decoration: none;
-            backdrop-filter: blur(10px);
-            z-index: 100;
-            transition: 0.3s;
-        }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(163, 255, 191, 0.08);
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      width: fit-content;
+      border: 1px solid rgba(163,255,191,0.14);
+    }
 
-        .share-float:hover {
-            background: #25D366;
-            border-color: #25D366;
-        }
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--green);
+      box-shadow: 0 0 0 6px rgba(163,255,191,0.12);
+      animation: pulse 2s infinite;
+    }
 
-        footer {
-            margin-top: 50px;
-            text-align: center;
-            opacity: 0.5;
-            padding-bottom: 40px;
-        }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.18); opacity: 0.78; }
+    }
 
-        .footer-info {
-            font-size: 0.4rem;
-            letter-spacing: 2px;
-            line-height: 2.2;
-        }
-    </style>
+    h1, h2, h3, h4, p { margin: 0; }
+
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 76px);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+      margin-top: 18px;
+      max-width: 10ch;
+    }
+
+    .hero h1 .accent {
+      color: var(--green);
+      text-shadow: 0 0 24px rgba(163,255,191,0.10);
+    }
+
+    .hero p.lead {
+      margin-top: 20px;
+      max-width: 60ch;
+      font-size: 17px;
+      line-height: 1.75;
+      color: #d7e3d8;
+    }
+
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .chip {
+      padding: 12px 16px;
+      border-radius: 999px;
+      background: rgba(163,255,191,0.05);
+      border: 1px solid rgba(163,255,191,0.10);
+      color: #dbf2df;
+      font-size: 14px;
+    }
+
+    .hero-bottom {
+      margin-top: 34px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .mini-stat {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(163,255,191,0.10);
+      border-radius: 22px;
+      padding: 18px;
+    }
+
+    .mini-stat .label {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .mini-stat .value {
+      font-size: clamp(24px, 3vw, 34px);
+      letter-spacing: -0.04em;
+      font-weight: 700;
+    }
+
+    .hero-side {
+      display: grid;
+      gap: 18px;
+    }
+
+    .score-card {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 270px;
+    }
+
+    .score-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(163,255,191,0.08);
+      color: var(--green);
+      border: 1px solid rgba(163,255,191,0.14);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .score-number {
+      font-size: clamp(56px, 8vw, 92px);
+      font-weight: 800;
+      letter-spacing: -0.06em;
+      margin: 16px 0 10px;
+      line-height: 0.9;
+    }
+
+    .score-sub {
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 30ch;
+    }
+
+    .ring-wrap {
+      display: grid;
+      place-items: center;
+      padding: 26px;
+      min-height: 270px;
+    }
+
+    .ring {
+      width: min(100%, 260px);
+      aspect-ratio: 1;
+      position: relative;
+      display: grid;
+      place-items: center;
+    }
+
+    .ring svg {
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+      overflow: visible;
+    }
+
+    .ring .center {
+      position: absolute;
+      inset: 22%;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      background: radial-gradient(circle, rgba(8,13,9,0.96), rgba(6,8,6,0.96));
+      border: 1px solid rgba(163,255,191,0.10);
+      padding: 18px;
+    }
+
+    .ring .center strong {
+      display: block;
+      font-size: clamp(24px, 4vw, 34px);
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .ring .center span {
+      color: var(--muted);
+      margin-top: 6px;
+      font-size: 9px;
+      line-height: 1.5;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+    }
+
+    .section-head p {
+      max-width: 58ch;
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 15px;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .metric-card {
+      padding: 22px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(180deg, rgba(13,20,13,0.96), rgba(11,16,11,0.82));
+      border: 1px solid var(--stroke);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.22);
+      min-height: 172px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .metric-card::after {
+      content: "";
+      position: absolute;
+      inset: auto -10% -35% auto;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(163,255,191,0.18), transparent 68%);
+      filter: blur(8px);
+    }
+
+    .metric-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .metric-top .tag {
+      font-size: 12px;
+      color: var(--green);
+      border: 1px solid rgba(163,255,191,0.12);
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(163,255,191,0.05);
+    }
+
+    .metric-card h3 {
+      font-size: 15px;
+      color: var(--muted);
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    .metric-card .number {
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1;
+      letter-spacing: -0.05em;
+      margin: 16px 0 10px;
+      font-weight: 800;
+    }
+
+    .metric-card .desc {
+      color: #c4d6c6;
+      line-height: 1.65;
+      font-size: 14px;
+    }
+
+    .chart-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+    }
+
+    .panel {
+      padding: 24px;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(180deg, rgba(11,16,11,0.92), rgba(10,15,10,0.75));
+      border: 1px solid var(--stroke);
+      box-shadow: 0 18px 42px rgba(0,0,0,0.24);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 22px;
+    }
+
+    .panel-header h3 {
+      font-size: clamp(20px, 2.2vw, 28px);
+      letter-spacing: -0.04em;
+    }
+
+    .panel-header p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+      max-width: 52ch;
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(163,255,191,0.08);
+    }
+
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .bar-chart {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      align-items: end;
+      min-height: 360px;
+      padding: 18px 4px 0;
+      border-top: 1px solid rgba(163,255,191,0.08);
+      position: relative;
+    }
+
+    .bar-chart::before,
+    .bar-chart::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      border-top: 1px dashed rgba(163,255,191,0.08);
+      pointer-events: none;
+    }
+
+    .bar-chart::before { top: 33%; }
+    .bar-chart::after { top: 66%; }
+
+    .bar-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      position: relative;
+    }
+
+    .bar-stack {
+      width: 100%;
+      max-width: 110px;
+      height: 290px;
+      display: flex;
+      align-items: end;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .bar {
+      width: 34px;
+      border-radius: 18px 18px 8px 8px;
+      position: relative;
+      transform-origin: bottom;
+      animation: growBar 1.2s cubic-bezier(.2,.9,.2,1) both;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.12), 0 12px 20px rgba(0,0,0,0.18);
+    }
+
+    .bar.primary {
+      background: linear-gradient(180deg, rgba(163,255,191,1), rgba(52,212,109,0.82));
+    }
+
+    .bar.secondary {
+      background: linear-gradient(180deg, rgba(255,255,255,0.34), rgba(163,255,191,0.16));
+    }
+
+    .bar-label {
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .bar-value {
+      font-size: 13px;
+      color: #dff7e5;
+      background: rgba(163,255,191,0.06);
+      border: 1px solid rgba(163,255,191,0.08);
+      padding: 8px 10px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    @keyframes growBar {
+      from { transform: scaleY(0.05); opacity: 0.35; }
+      to { transform: scaleY(1); opacity: 1; }
+    }
+
+    .funnel {
+      display: grid;
+      gap: 14px;
+      margin-top: 4px;
+    }
+
+    .funnel-row {
+      border-radius: 24px;
+      padding: 18px 18px 16px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(163,255,191,0.09);
+      background: rgba(255,255,255,0.02);
+    }
+
+    .funnel-row::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: var(--width, 50%);
+      background: linear-gradient(90deg, rgba(163,255,191,0.25), rgba(52,212,109,0.09));
+      border-right: 1px solid rgba(163,255,191,0.14);
+    }
+
+    .funnel-row > * { position: relative; z-index: 1; }
+
+    .funnel-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .funnel-top strong {
+      font-size: 17px;
+      letter-spacing: -0.02em;
+    }
+
+    .funnel-top span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .funnel-value {
+      font-size: clamp(24px, 3vw, 36px);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .funnel-desc {
+      color: #c9d7cb;
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .line-card {
+      min-height: 460px;
+    }
+
+    .line-wrap {
+      margin-top: 6px;
+      border-top: 1px solid rgba(163,255,191,0.08);
+      padding-top: 18px;
+    }
+
+    .line-meta {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .line-meta .info {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(163,255,191,0.08);
+      border-radius: 18px;
+      padding: 14px;
+    }
+
+    .line-meta .info span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    .line-meta .info strong {
+      font-size: 24px;
+      letter-spacing: -0.04em;
+    }
+
+    svg.chart-svg {
+      width: 100%;
+      height: 270px;
+      display: block;
+    }
+
+    .axis-text {
+      fill: #89a38f;
+      font-size: 12px;
+      font-family: inherit;
+    }
+
+    .grid-line {
+      stroke: rgba(163,255,191,0.10);
+      stroke-dasharray: 4 7;
+    }
+
+    .track-line {
+      fill: none;
+      stroke: rgba(163,255,191,0.18);
+      stroke-width: 3;
+    }
+
+    .main-line {
+      fill: none;
+      stroke: #a3ffbf;
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      filter: drop-shadow(0 0 10px rgba(163,255,191,0.24));
+      stroke-dasharray: 1200;
+      stroke-dashoffset: 1200;
+      animation: drawLine 2.2s ease forwards 0.4s;
+    }
+
+    .secondary-line {
+      fill: none;
+      stroke: rgba(255,255,255,0.40);
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-dasharray: 1200;
+      stroke-dashoffset: 1200;
+      animation: drawLine 2.1s ease forwards 0.6s;
+    }
+
+    @keyframes drawLine {
+      to { stroke-dashoffset: 0; }
+    }
+
+    .point {
+      fill: #a3ffbf;
+      stroke: rgba(5,8,5,0.9);
+      stroke-width: 4;
+    }
+
+    .point-soft {
+      fill: rgba(255,255,255,0.55);
+      stroke: rgba(5,8,5,0.9);
+      stroke-width: 4;
+    }
+
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 18px;
+    }
+
+    .market-card {
+      min-height: 440px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .donut-wrap {
+      display: grid;
+      place-items: center;
+      padding: 18px 0 8px;
+    }
+
+    .donut {
+      width: min(100%, 300px);
+      aspect-ratio: 1;
+      position: relative;
+      display: grid;
+      place-items: center;
+    }
+
+    .donut svg {
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+    }
+
+    .donut-center {
+      position: absolute;
+      inset: 26%;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      background: radial-gradient(circle, rgba(8,13,9,0.98), rgba(7,10,7,0.98));
+      border: 1px solid rgba(163,255,191,0.12);
+      padding: 18px;
+    }
+
+    .donut-center strong {
+      font-size: 34px;
+      line-height: 1;
+      letter-spacing: -0.05em;
+    }
+
+    .donut-center span {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-top: 6px;
+    }
+
+    .compare-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .compare-item {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 12px;
+      align-items: center;
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(163,255,191,0.08);
+    }
+
+    .compare-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: rgba(163,255,191,0.08);
+      color: var(--green);
+      font-size: 18px;
+    }
+
+    .compare-item strong {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .compare-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .compare-item b {
+      font-size: 20px;
+      letter-spacing: -0.03em;
+    }
+
+    .progress-stack {
+      display: grid;
+      gap: 16px;
+    }
+
+    .progress-card {
+      padding: 18px;
+      border-radius: 22px;
+      border: 1px solid rgba(163,255,191,0.09);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .progress-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 12px;
+      align-items: center;
+    }
+
+    .progress-head strong {
+      font-size: 16px;
+    }
+
+    .progress-head span {
+      color: var(--green);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .progress-bar::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.10), transparent);
+      transform: translateX(-120%);
+      animation: shine 3.2s infinite;
+    }
+
+    .progress-fill {
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, rgba(163,255,191,0.62), rgba(52,212,109,1));
+      width: 0;
+      animation: fillBar 1.3s ease forwards;
+    }
+
+    @keyframes fillBar {
+      to { width: var(--value, 50%); }
+    }
+
+    @keyframes shine {
+      to { transform: translateX(120%); }
+    }
+
+    .timeline {
+      display: grid;
+      gap: 16px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: start;
+      padding: 20px;
+      border-radius: 24px;
+      border: 1px solid rgba(163,255,191,0.08);
+      background: linear-gradient(180deg, rgba(12,17,12,0.88), rgba(11,15,11,0.72));
+    }
+
+    .timeline-step {
+      width: 52px;
+      height: 52px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      color: var(--green);
+      background: rgba(163,255,191,0.07);
+      border: 1px solid rgba(163,255,191,0.12);
+    }
+
+    .timeline-item h4 {
+      font-size: 20px;
+      letter-spacing: -0.03em;
+      margin-bottom: 8px;
+    }
+
+    .timeline-item p {
+      color: #c8d5ca;
+      line-height: 1.75;
+      font-size: 15px;
+    }
+
+    .callout-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .callout {
+      padding: 24px;
+      min-height: 220px;
+      border-radius: 28px;
+      border: 1px solid rgba(163,255,191,0.10);
+      background: linear-gradient(180deg, rgba(13,20,13,0.94), rgba(10,15,10,0.78));
+      position: relative;
+      overflow: hidden;
+    }
+
+    .callout::after {
+      content: "";
+      position: absolute;
+      right: -30px;
+      bottom: -40px;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(163,255,191,0.16), transparent 68%);
+    }
+
+    .callout .kicker {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(163,255,191,0.07);
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      border: 1px solid rgba(163,255,191,0.12);
+    }
+
+    .callout h3 {
+      font-size: 24px;
+      line-height: 1.06;
+      letter-spacing: -0.04em;
+      margin-bottom: 12px;
+      max-width: 12ch;
+    }
+
+    .callout p {
+      color: #c7d4c9;
+      line-height: 1.72;
+      font-size: 15px;
+      max-width: 36ch;
+    }
+
+    .decision-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .decision-card {
+      padding: 26px;
+      border-radius: 30px;
+      border: 1px solid rgba(163,255,191,0.10);
+      background: linear-gradient(180deg, rgba(12,18,12,0.94), rgba(10,14,10,0.76));
+      position: relative;
+      overflow: hidden;
+    }
+
+    .decision-card.primary {
+      border-color: rgba(163,255,191,0.22);
+      box-shadow: 0 20px 50px rgba(23, 58, 31, 0.18);
+    }
+
+    .decision-card .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      border: 1px solid rgba(163,255,191,0.12);
+      background: rgba(163,255,191,0.07);
+      color: var(--green);
+    }
+
+    .decision-card h3 {
+      font-size: 28px;
+      letter-spacing: -0.04em;
+      margin-bottom: 10px;
+    }
+
+    .decision-card p {
+      color: #c8d5ca;
+      line-height: 1.75;
+      font-size: 15px;
+      margin-bottom: 22px;
+      max-width: 48ch;
+    }
+
+    .decision-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .decision-list .item {
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(163,255,191,0.08);
+      color: #d9e6db;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .decision-foot {
+      margin-top: 22px;
+      padding: 16px;
+      border-radius: 20px;
+      background: rgba(163,255,191,0.06);
+      border: 1px solid rgba(163,255,191,0.10);
+      font-size: 14px;
+      line-height: 1.7;
+      color: #dff2e3;
+    }
+
+    .footer {
+      padding: 18px 0 54px;
+    }
+
+    .footer-box {
+      padding: 28px;
+      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(11,16,11,0.94), rgba(9,13,9,0.80));
+      border: 1px solid rgba(163,255,191,0.10);
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .footer-box h3 {
+      font-size: clamp(28px, 4vw, 46px);
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+      margin-bottom: 12px;
+    }
+
+    .footer-box p {
+      color: #c6d5c8;
+      line-height: 1.8;
+      font-size: 15px;
+      max-width: 60ch;
+    }
+
+    .footer-stats {
+      display: grid;
+      gap: 12px;
+    }
+
+    .footer-pill {
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(163,255,191,0.08);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      color: #dce9de;
+      font-size: 14px;
+    }
+
+    .footer-pill strong {
+      color: var(--green);
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .counter {
+      font-variant-numeric: tabular-nums;
+    }
+
+    @media (max-width: 1120px) {
+      .hero-shell,
+      .chart-grid,
+      .compare-grid,
+      .footer-box,
+      .decision-wrap,
+      .callout-grid,
+      .metrics-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-card {
+        min-height: auto;
+      }
+
+      .hero-side {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .topbar-inner,
+      .section-head,
+      .panel-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-shell,
+      .chart-grid,
+      .compare-grid,
+      .footer-box,
+      .decision-wrap,
+      .callout-grid,
+      .metrics-grid,
+      .hero-side,
+      .hero-bottom,
+      .line-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .bar-chart {
+        overflow-x: auto;
+        padding-bottom: 6px;
+      }
+
+      .bar-chart {
+        min-height: auto;
+      }
+
+      .bar-stack {
+        height: 240px;
+      }
+
+      .topbar {
+        position: relative;
+      }
+
+      .nav {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(calc(100% - 20px), var(--max));
+      }
+
+      section {
+        padding: 28px 0;
+      }
+
+      .hero-card,
+      .panel,
+      .metric-card,
+      .callout,
+      .decision-card,
+      .footer-box,
+      .glass {
+        border-radius: 24px;
+      }
+
+      .hero-card,
+      .score-card,
+      .ring-wrap,
+      .metric-card,
+      .panel,
+      .callout,
+      .decision-card,
+      .footer-box {
+        padding: 20px;
+      }
+
+      .hero p.lead,
+      .section-head p,
+      .panel-header p,
+      .decision-card p,
+      .timeline-item p,
+      .callout p {
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <div class="page">
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <div class="brand">
+          <div class="brand-mark">⚖</div>
+          <div>
+            Relatório Premium
+            <small>Heleneide Advocacia • Resultados digitais</small>
+          </div>
+        </div>
+        <nav class="nav" aria-label="Seções da página">
+          <a href="#visao-geral">Visão Geral</a>
+          <a href="#campanha">Campanha</a>
+          <a href="#canais">Canais</a>
+          <a href="#analise">Análise</a>
+          <a href="#decisao">Próximo Passo</a>
+        </nav>
+      </div>
+    </header>
 
-    <div class="bg-image"></div>
-    <div class="bg-overlay"></div>
-
-    <div class="container">
-        <header class="logo-wrapper">
-            <div class="logo-container">
-                <img src="logo.png" alt="Gessel Advocacia" onerror="this.src='https://via.placeholder.com/200x80/000000/FFFFFF?text=GESSEL+ADVOCACIA'">
+    <main>
+      <section class="hero container fade-up" id="visao-geral">
+        <div class="hero-shell">
+          <article class="hero-card">
+            <div>
+              <div class="eyebrow">
+                <span class="eyebrow-dot"></span>
+                Demonstrativo de performance e posicionamento
+              </div>
+              <h1>
+                Resultados com <span class="accent">clareza, valor e direção</span>
+              </h1>
+              <p class="lead">
+                Esta página consolida a evolução do posicionamento digital da Heleneide, o desempenho da campanha e os próximos movimentos estratégicos. O cenário é simples de entender: a marca começou a ganhar presença, gerou interesse real e já está convertendo atenção em conversas qualificadas.
+              </p>
+              <div class="hero-points">
+                <div class="chip">Estética premium</div>
+                <div class="chip">Leitura rápida de métricas</div>
+                <div class="chip">Foco em resultados reais</div>
+                <div class="chip">Estratégia pensada para advocacia</div>
+              </div>
             </div>
-            <div class="office-name">Heleneide Pinto Advocacia e Consultoria Jurídica</div>
-        </header>
 
-        <div class="links-column">
-            <a href="https://wa.me/5521996201094" class="modern-btn" target="_blank" onclick="fbq('track', 'Contact')">
-                <span class="btn-label">Falar com Especialista</span>
-                <i class="ph ph-whatsapp-logo"></i>
-            </a>
-
-            <div class="form-card">
-                <div class="form-header">ANÁLISE DE CASO PRIORITÁRIA</div>
-                <form id="leadForm">
-                    <div class="input-group">
-                        <input type="text" id="name" placeholder="NOME COMPLETO" required>
-                    </div>
-                    <div class="input-group">
-                        <input type="tel" id="phone" placeholder="WHATSAPP (DDD)" required>
-                    </div>
-                    <div class="input-group">
-                        <select id="subject" required>
-                            <option value="" disabled selected>ASSUNTO DE INTERESSE</option>
-                            <option value="Divórcio / Separação">Divórcio ou Separação</option>
-                            <option value="Pensão Alimentícia">Pensão Alimentícia</option>
-                            <option value="Inventário / Herança">Inventário ou Herança</option>
-                            <option value="Guarda de Menores">Guarda de Menores</option>
-                            <option value="Outros Assuntos">Outros Assuntos</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="submit-btn" id="btnSubmit">ENVIAR E INICIAR NO WHATSAPP</button>
-                </form>
+            <div class="hero-bottom">
+              <div class="mini-stat">
+                <div class="label">Alcance da campanha</div>
+                <div class="value counter" data-value="19622" data-prefix="">0</div>
+              </div>
+              <div class="mini-stat">
+                <div class="label">Conversas iniciadas</div>
+                <div class="value counter" data-value="22">0</div>
+              </div>
+              <div class="mini-stat">
+                <div class="label">Custo por conversa</div>
+                <div class="value counter money" data-value="11">R$ 0</div>
+              </div>
             </div>
+          </article>
+
+          <aside class="hero-side">
+            <div class="glass score-card fade-up">
+              <div class="score-badge">Indicador central da campanha</div>
+              <div>
+                <div class="score-number counter" data-value="56" data-suffix="%">0%</div>
+                <p class="score-sub">
+                  Economia estimada no custo por conversa em relação à média de mercado do nicho jurídico. Em vez de girar perto de R$ 25, o resultado atual está em cerca de R$ 11.
+                </p>
+              </div>
+            </div>
+
+            <div class="glass ring-wrap fade-up">
+              <div class="ring" aria-label="Progresso do investimento até a meta inicial de R$ 400">
+                <svg viewBox="0 0 220 220" role="img">
+                  <circle cx="110" cy="110" r="88" fill="none" stroke="rgba(163,255,191,0.10)" stroke-width="18"></circle>
+                  <circle cx="110" cy="110" r="88" fill="none" stroke="url(#gradRing)" stroke-width="18" stroke-linecap="round" stroke-dasharray="553" stroke-dashoffset="131"></circle>
+                  <defs>
+                    <linearGradient id="gradRing" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stop-color="#a3ffbf"></stop>
+                      <stop offset="100%" stop-color="#34d46d"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div class="center">
+                  <div>
+                    <strong>76%</strong>
+                    <span>da meta inicial de R$ 400 já executada com aprendizado acumulado e criativo validado.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="container fade-up">
+        <div class="section-head">
+          <div>
+            <h2>Resumo executivo</h2>
+          </div>
+          <p>
+            Em linguagem de negócio, sem perfumaria: a operação já saiu do zero, validou mensagem, trouxe pessoas interessadas para o WhatsApp e construiu uma base mais forte para crescimento orgânico e pago.
+          </p>
         </div>
 
-        <footer>
-            <div class="footer-info">
-                OAB-RJ 174312<br>
-                ESTRATÉGIA JURÍDICA PERSONALIZADA<br>
-                ©2026 HELENEIDE
+        <div class="metrics-grid">
+          <article class="metric-card fade-up">
+            <div class="metric-top">
+              <span class="tag">Presença</span>
+              <span>📡</span>
             </div>
-        </footer>
+            <h3>Pessoas alcançadas</h3>
+            <div class="number counter" data-value="19622">0</div>
+            <p class="desc">Quase 20 mil pessoas foram impactadas. Isso é presença de mercado acontecendo de verdade.</p>
+          </article>
+
+          <article class="metric-card fade-up">
+            <div class="metric-top">
+              <span class="tag">Exposição</span>
+              <span>👁️</span>
+            </div>
+            <h3>Impressões</h3>
+            <div class="number counter" data-value="23417">0</div>
+            <p class="desc">O anúncio apareceu mais de 23 mil vezes. Repetição inteligente ajuda a fixar a marca na mente.</p>
+          </article>
+
+          <article class="metric-card fade-up">
+            <div class="metric-top">
+              <span class="tag">Ação</span>
+              <span>🖱️</span>
+            </div>
+            <h3>Cliques no link</h3>
+            <div class="number counter" data-value="207">0</div>
+            <p class="desc">Mais de 200 pessoas demonstraram interesse suficiente para clicar e buscar mais informações.</p>
+          </article>
+
+          <article class="metric-card fade-up">
+            <div class="metric-top">
+              <span class="tag">Conversão</span>
+              <span>💬</span>
+            </div>
+            <h3>Conversas iniciadas</h3>
+            <div class="number counter" data-value="22">0</div>
+            <p class="desc">Aqui mora o que interessa: gente chamando, abrindo conversa e entrando no radar comercial.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="container fade-up" id="campanha">
+        <div class="chart-grid">
+          <article class="panel fade-up">
+            <div class="panel-header">
+              <div>
+                <h3>Leitura visual das métricas principais</h3>
+                <p>Comparativo proporcional entre alcance, impressões, cliques, conversas e crescimento no Instagram. A ideia aqui é deixar claro que a campanha não ficou só em visualização: ela puxou ação.</p>
+              </div>
+              <div class="legend">
+                <div class="legend-item"><span class="legend-dot" style="background:#a3ffbf"></span>Resultado principal</div>
+                <div class="legend-item"><span class="legend-dot" style="background:rgba(255,255,255,0.35)"></span>Apoio visual</div>
+              </div>
+            </div>
+
+            <div class="bar-chart" aria-label="Gráfico de barras com métricas da campanha">
+              <div class="bar-col">
+                <div class="bar-value">19.622</div>
+                <div class="bar-stack">
+                  <div class="bar primary" style="height: 92%; animation-delay: .1s"></div>
+                  <div class="bar secondary" style="height: 82%; animation-delay: .2s"></div>
+                </div>
+                <div class="bar-label">Alcance</div>
+              </div>
+
+              <div class="bar-col">
+                <div class="bar-value">23.417</div>
+                <div class="bar-stack">
+                  <div class="bar primary" style="height: 100%; animation-delay: .15s"></div>
+                  <div class="bar secondary" style="height: 88%; animation-delay: .25s"></div>
+                </div>
+                <div class="bar-label">Impressões</div>
+              </div>
+
+              <div class="bar-col">
+                <div class="bar-value">207</div>
+                <div class="bar-stack">
+                  <div class="bar primary" style="height: 42%; animation-delay: .2s"></div>
+                  <div class="bar secondary" style="height: 30%; animation-delay: .3s"></div>
+                </div>
+                <div class="bar-label">Cliques</div>
+              </div>
+
+              <div class="bar-col">
+                <div class="bar-value">22</div>
+                <div class="bar-stack">
+                  <div class="bar primary" style="height: 30%; animation-delay: .25s"></div>
+                  <div class="bar secondary" style="height: 18%; animation-delay: .35s"></div>
+                </div>
+                <div class="bar-label">Conversas</div>
+              </div>
+
+              <div class="bar-col">
+                <div class="bar-value">+36</div>
+                <div class="bar-stack">
+                  <div class="bar primary" style="height: 36%; animation-delay: .3s"></div>
+                  <div class="bar secondary" style="height: 24%; animation-delay: .4s"></div>
+                </div>
+                <div class="bar-label">Novos seguidores</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel fade-up">
+            <div class="panel-header">
+              <div>
+                <h3>Funil de interesse</h3>
+                <p>Esse funil deixa uma coisa evidente: houve atenção, clique e conversa. Ou seja, a máquina já começou a girar.</p>
+              </div>
+            </div>
+
+            <div class="funnel">
+              <div class="funnel-row" style="--width: 100%">
+                <div class="funnel-top">
+                  <strong>Topo do funil</strong>
+                  <span>Presença de marca</span>
+                </div>
+                <div class="funnel-value counter" data-value="19622">0</div>
+                <p class="funnel-desc">Pessoas alcançadas. Aqui a marca apareceu para uma massa relevante e ganhou terreno na memória do público.</p>
+              </div>
+
+              <div class="funnel-row" style="--width: 73%">
+                <div class="funnel-top">
+                  <strong>Exposição reforçada</strong>
+                  <span>Mais de uma exibição</span>
+                </div>
+                <div class="funnel-value counter" data-value="23417">0</div>
+                <p class="funnel-desc">Impressões acima do alcance indicam reforço de mensagem sem saturar. Frequência média de 1,2: equilíbrio bom.</p>
+              </div>
+
+              <div class="funnel-row" style="--width: 34%">
+                <div class="funnel-top">
+                  <strong>Interesse direto</strong>
+                  <span>Cliques no link</span>
+                </div>
+                <div class="funnel-value counter" data-value="207">0</div>
+                <p class="funnel-desc">Mais de 200 pessoas decidiram agir. Não foi gente passando o olho. Foi gente indo atrás.</p>
+              </div>
+
+              <div class="funnel-row" style="--width: 22%">
+                <div class="funnel-top">
+                  <strong>Oportunidade real</strong>
+                  <span>Conversas abertas</span>
+                </div>
+                <div class="funnel-value counter" data-value="22">0</div>
+                <p class="funnel-desc">As conversas representam intenção real. Aqui já existe chance concreta de cliente, não só curiosidade vazia.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="container fade-up" id="canais">
+        <div class="compare-grid">
+          <article class="panel line-card fade-up">
+            <div class="panel-header">
+              <div>
+                <h3>Evolução do posicionamento e performance</h3>
+                <p>Visão consolidada do período de 25 de fevereiro a 20 de março. A linha principal mostra a aceleração de tração da campanha. A linha secundária representa o amadurecimento do perfil e da base orgânica.</p>
+              </div>
+            </div>
+
+            <div class="line-wrap">
+              <div class="line-meta">
+                <div class="info">
+                  <span>CTR máxima observada</span>
+                  <strong>1,17%</strong>
+                </div>
+                <div class="info">
+                  <span>CPC a partir de</span>
+                  <strong>R$ 0,33</strong>
+                </div>
+                <div class="info">
+                  <span>Frequência média</span>
+                  <strong>1,2</strong>
+                </div>
+              </div>
+
+              <svg class="chart-svg" viewBox="0 0 760 270" role="img" aria-label="Linha de evolução da campanha e crescimento digital">
+                <line class="grid-line" x1="60" y1="50" x2="710" y2="50"></line>
+                <line class="grid-line" x1="60" y1="120" x2="710" y2="120"></line>
+                <line class="grid-line" x1="60" y1="190" x2="710" y2="190"></line>
+                <line class="grid-line" x1="60" y1="240" x2="710" y2="240"></line>
+
+                <text class="axis-text" x="18" y="244">0</text>
+                <text class="axis-text" x="18" y="194">25</text>
+                <text class="axis-text" x="18" y="124">50</text>
+                <text class="axis-text" x="18" y="54">75+</text>
+
+                <path class="track-line" d="M60 210 L170 190 L280 164 L390 118 L500 98 L610 70 L710 46"></path>
+                <path class="secondary-line" d="M60 218 L170 210 L280 195 L390 180 L500 160 L610 146 L710 134"></path>
+                <path class="main-line" d="M60 220 L170 205 L280 170 L390 130 L500 100 L610 72 L710 44"></path>
+
+                <circle class="point" cx="60" cy="220" r="7"></circle>
+                <circle class="point" cx="170" cy="205" r="7"></circle>
+                <circle class="point" cx="280" cy="170" r="7"></circle>
+                <circle class="point" cx="390" cy="130" r="7"></circle>
+                <circle class="point" cx="500" cy="100" r="7"></circle>
+                <circle class="point" cx="610" cy="72" r="7"></circle>
+                <circle class="point" cx="710" cy="44" r="7"></circle>
+
+                <circle class="point-soft" cx="60" cy="218" r="6"></circle>
+                <circle class="point-soft" cx="170" cy="210" r="6"></circle>
+                <circle class="point-soft" cx="280" cy="195" r="6"></circle>
+                <circle class="point-soft" cx="390" cy="180" r="6"></circle>
+                <circle class="point-soft" cx="500" cy="160" r="6"></circle>
+                <circle class="point-soft" cx="610" cy="146" r="6"></circle>
+                <circle class="point-soft" cx="710" cy="134" r="6"></circle>
+
+                <text class="axis-text" x="50" y="262">25 Fev</text>
+                <text class="axis-text" x="148" y="262">1 Mar</text>
+                <text class="axis-text" x="258" y="262">5 Mar</text>
+                <text class="axis-text" x="368" y="262">10 Mar</text>
+                <text class="axis-text" x="476" y="262">14 Mar</text>
+                <text class="axis-text" x="588" y="262">18 Mar</text>
+                <text class="axis-text" x="690" y="262">20 Mar</text>
+              </svg>
+            </div>
+          </article>
+
+          <article class="panel market-card fade-up">
+            <div class="panel-header">
+              <div>
+                <h3>Custo por conversa vs. mercado</h3>
+                <p>No direito, o custo médio por conversa gira em torno de R$ 25. O resultado atual está perto de R$ 11. Isso é eficiência. Ponto.</p>
+              </div>
+            </div>
+
+            <div class="donut-wrap">
+              <div class="donut">
+                <svg viewBox="0 0 220 220" role="img">
+                  <circle cx="110" cy="110" r="82" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="20"></circle>
+                  <circle cx="110" cy="110" r="82" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="20" stroke-dasharray="515" stroke-dashoffset="180" stroke-linecap="round"></circle>
+                  <circle cx="110" cy="110" r="82" fill="none" stroke="url(#gradDonut)" stroke-width="20" stroke-dasharray="515" stroke-dashoffset="288" stroke-linecap="round"></circle>
+                  <defs>
+                    <linearGradient id="gradDonut" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stop-color="#a3ffbf"></stop>
+                      <stop offset="100%" stop-color="#34d46d"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div class="donut-center">
+                  <div>
+                    <strong>R$ 11</strong>
+                    <span>custo por conversa atual<br>vs. R$ 25 de média</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="compare-list">
+              <div class="compare-item">
+                <div class="compare-icon">✓</div>
+                <div>
+                  <strong>Atual</strong>
+                  <span>Campanha saudável, clique barato e conversa abaixo da média do nicho.</span>
+                </div>
+                <b>R$ 11</b>
+              </div>
+
+              <div class="compare-item">
+                <div class="compare-icon">≈</div>
+                <div>
+                  <strong>Média do mercado</strong>
+                  <span>Faixa comum de custo por conversa em advocacia para campanhas com WhatsApp.</span>
+                </div>
+                <b>R$ 25</b>
+              </div>
+
+              <div class="compare-item">
+                <div class="compare-icon">↓</div>
+                <div>
+                  <strong>Diferença</strong>
+                  <span>Margem relevante de eficiência que abre espaço para escalar com mais confiança.</span>
+                </div>
+                <b>-56%</b>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="container fade-up" id="analise">
+        <div class="section-head">
+          <div>
+            <h2>Leitura por canal</h2>
+          </div>
+          <p>
+            O crescimento não depende só do anúncio. O anúncio abre a porta. O posicionamento e a rotina digital fazem o resto. Aqui está o quadro completo.
+          </p>
+        </div>
+
+        <div class="callout-grid">
+          <article class="callout fade-up">
+            <div class="kicker">Instagram</div>
+            <h3>Perfil mais limpo e mais entendido pelo algoritmo</h3>
+            <p>
+              O perfil saiu de 144 para 180 seguidores, com ganho de 36 pessoas e leitura mais clara sobre nicho, oferta e posicionamento. Em média, 31 desses novos seguidores já representam potenciais clientes no radar.
+            </p>
+          </article>
+
+          <article class="callout fade-up">
+            <div class="kicker">Facebook</div>
+            <h3>Canal subestimado, mas com público maduro e sério</h3>
+            <p>
+              Mesmo com uso menor, o orgânico mostrou movimento. Isso importa porque o público da advocacia, em muitos casos, ainda está muito presente por lá. Ignorar Facebook é deixar oportunidade na mesa.
+            </p>
+          </article>
+
+          <article class="callout fade-up">
+            <div class="kicker">TikTok</div>
+            <h3>Janela forte para alcance orgânico e autoridade</h3>
+            <p>
+              Conteúdo direto, autêntico e com rosto tende a performar melhor. Para autoridade pessoal no digital, o TikTok hoje é uma avenida aberta. Não entrar ali é andar devagar onde dava para correr.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="container fade-up">
+        <div class="compare-grid">
+          <article class="panel fade-up">
+            <div class="panel-header">
+              <div>
+                <h3>Progresso dos pilares estratégicos</h3>
+                <p>Leitura visual do estágio atual de cada frente. Não é régua absoluta. É uma régua prática para orientar decisão e prioridade.</p>
+              </div>
+            </div>
+
+            <div class="progress-stack">
+              <div class="progress-card">
+                <div class="progress-head">
+                  <strong>Posicionamento do Instagram</strong>
+                  <span>82%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="--value:82%"></div></div>
+              </div>
+
+              <div class="progress-card">
+                <div class="progress-head">
+                  <strong>Validação do criativo campeão</strong>
+                  <span>88%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="--value:88%"></div></div>
+              </div>
+
+              <div class="progress-card">
+                <div class="progress-head">
+                  <strong>Eficiência do tráfego pago</strong>
+                  <span>84%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="--value:84%"></div></div>
+              </div>
+
+              <div class="progress-card">
+                <div class="progress-head">
+                  <strong>Presença ativa no Facebook</strong>
+                  <span>58%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="--value:58%"></div></div>
+              </div>
+
+              <div class="progress-card">
+                <div class="progress-head">
+                  <strong>Potencial de crescimento no TikTok</strong>
+                  <span>91%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="--value:91%"></div></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel fade-up">
+            <div class="panel-header">
+              <div>
+                <h3>Próximos 90 dias: o que tende a acontecer</h3>
+                <p>Com consistência diária, esse é o desenho mais provável. Marketing bom é repetição com inteligência, não milagre de 48 horas.</p>
+              </div>
+            </div>
+
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-step">01</div>
+                <div>
+                  <h4>Mais reconhecimento</h4>
+                  <p>Com a continuidade da entrega, o público começa a lembrar com mais facilidade da marca e do nome. Repetição com equilíbrio constrói lembrança.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-step">02</div>
+                <div>
+                  <h4>Mais confiança</h4>
+                  <p>Perfil organizado, conteúdo consistente e anúncio coerente passam uma mensagem muito clara: profissionalismo. Isso encurta a distância entre ver e chamar.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-step">03</div>
+                <div>
+                  <h4>Mais oportunidades de conversa</h4>
+                  <p>Quando o criativo já provou que chama atenção, o próximo ganho vem de consistência e aumento controlado de volume. Escala sem cérebro é desperdício. Escala com dado é expansão.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="container fade-up" id="continuidade">
+  <div class="section-head">
+    <div>
+      <h2>Próximo movimento estratégico</h2>
     </div>
+    <p>
+      Com base nos dados atuais, existe um ponto importante que precisa ser entendido para evoluir os resultados.
+    </p>
+  </div>
 
-    <a href="#" class="share-float" id="shareBtn" title="Compartilhar">
-        <i class="ph ph-share-network" style="font-size: 1.5rem;"></i>
-    </a>
+  <div class="decision-wrap">
+    <article class="decision-card primary fade-up" style="border-color: rgba(163,255,191,0.35); box-shadow: 0 30px 80px rgba(52,212,109,0.15);">
+      <div class="badge">Direcionamento estratégico</div>
 
-    <script>
-        // --- CONFIGURAÇÕES ---
-        const CONFIG = {
-            whatsappNumber: '5521992506306',
-            webhookUrl: 'SUA_URL_DO_N8N_OU_APPSCRIPT',
-            pixelId: 'SEU_PIXEL_ID'
-        };
+      <h3>Com os resultados atuais, o próximo passo natural é escalar</h3>
 
-        // Máscara Simples para Telefone
-        document.getElementById('phone').addEventListener('input', function (e) {
-            let x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
-            e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
-        });
+      <p>
+        A campanha já mostrou sinais claros de que está funcionando: gerou alcance, trouxe cliques e iniciou conversas com custo abaixo da média do mercado.
+        Isso indica que o caminho está validado.
+      </p>
 
-        // Lógica do Formulário
-        document.getElementById('leadForm').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            const btn = document.getElementById('btnSubmit');
-            const nome = document.getElementById('name').value;
-            const fone = document.getElementById('phone').value;
-            const assunto = document.getElementById('subject').value;
+      <div class="decision-list">
+        <div class="item">O criativo já provou que chama atenção.</div>
+        <div class="item">O público está respondendo com interesse real.</div>
+        <div class="item">O custo está saudável e abaixo do mercado.</div>
+      </div>
 
-            btn.disabled = true;
-            btn.innerText = "REGISTRANDO...";
+      <p style="margin-top: 18px;">
+        Quando esses três pontos acontecem juntos, existe um padrão claro no marketing digital:
+        <strong>a próxima etapa é aumentar a distribuição.</strong>
+      </p>
 
-            const payload = {
-                nome,
-                whatsapp: fone,
-                assunto,
-                origem: window.location.href,
-                data: new Date().toLocaleString('pt-BR')
-            };
+      <div class="decision-foot" style="margin-top: 20px;">
+        Se continuar com a Aprovados, indicamos o aumento da verba para anúncios.
+        Esse é o procedimento normal quando uma campanha começa a performar bem.
+      </div>
+    </article>
 
-            // 1. Enviar para Webhook (n8n / Google App Script)
-            try {
-                await fetch(CONFIG.webhookUrl, {
-                    method: 'POST',
-                    mode: 'no-cors', // Para evitar erros de CORS se o servidor não estiver configurado
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-            } catch (err) { console.log("Erro webhook, seguindo para WhatsApp..."); }
+    <article class="decision-card fade-up">
+      <div class="badge">Explicação simples</div>
 
-            // 2. Rastreamento (Pixel e GTM)
-            if(typeof fbq !== 'undefined') fbq('track', 'Lead', { content_name: assunto });
-            if(typeof dataLayer !== 'undefined') dataLayer.push({'event': 'form_submission', 'subject': assunto});
+      <h3>Por que aumentar a verba nesse momento</h3>
 
-            // 3. Redirecionar para WhatsApp
-            const msgZap = `Olá, Dra. Heleneide. Me chamo ${nome}. Gostaria de uma análise sobre: *${assunto}*.`;
-            const wpUrl = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(msgZap)}`;
-            
-            setTimeout(() => {
-                window.location.href = wpUrl;
-            }, 500);
-        });
+      <p>
+        Não se trata de gastar mais por gastar. Se trata de aproveitar um momento onde a campanha já está validada.
+      </p>
 
-        // Lógica de Compartilhamento
-        document.getElementById('shareBtn').addEventListener('click', (e) => {
-            e.preventDefault();
-            const text = "Conheça Gessel Advocacia - Especialista em Direito de Família:";
-            const url = window.location.href;
-            window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text + " " + url)}`, '_blank');
-        });
-    </script>
+      <div class="decision-list">
+        <div class="item">Mais investimento = mais pessoas certas vendo.</div>
+        <div class="item">Mais pessoas vendo = mais chances de conversa.</div>
+        <div class="item">Mais conversas = mais oportunidades de cliente.</div>
+      </div>
 
-    <script>
-        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-        document,'script','https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', CONFIG.pixelId);
-        fbq('track', 'PageView');
-    </script>
+      <div class="decision-foot">
+        Em resumo: quando algo funciona, você coloca mais energia nele.
+        É assim que negócios crescem de forma consistente.
+      </div>
+    </article>
+  </div>
+</section>
+
+      <section class="container fade-up" id="decisao">
+        <div class="section-head">
+          <div>
+            <h2>Momento de decisão</h2>
+          </div>
+          <p>
+            A campanha já entregou sinais de validação. Agora a decisão é estratégica: manter o ritmo até o teto planejado ou acelerar enquanto o criativo está funcionando.
+          </p>
+        </div>
+
+        <div class="decision-wrap">
+          <article class="decision-card fade-up">
+            <div class="badge">Opção 1 • Continuidade controlada</div>
+            <h3>Manter até os R$ 400</h3>
+            <p>
+              Caminho mais conservador. Mantém a campanha rodando no ritmo atual, coletando mais dados, sem pressionar demais a entrega. É uma escolha segura para seguir observando comportamento e estabilidade.
+            </p>
+            <div class="decision-list">
+              <div class="item">Preserva o ritmo de aprendizado da campanha.</div>
+              <div class="item">Mantém previsibilidade no investimento diário de R$ 26.</div>
+              <div class="item">Bom para continuar validando padrão de conversa e perfil do público.</div>
+            </div>
+            <div class="decision-foot">
+              Ideal para quem quer prudência e refinamento antes de acelerar. Não é ruim. Só é mais lento.
+            </div>
+          </article>
+
+          <article class="decision-card primary fade-up">
+            <div class="badge">Opção 2 • Escala inteligente</div>
+            <h3>Aumentar verba e ampliar alcance</h3>
+            <p>
+              Se a meta é acelerar resultado, esse é o movimento natural. O criativo já mostrou força, o custo está saudável e o público respondeu bem. Escalar agora faz sentido porque existe base para isso.
+            </p>
+            <div class="decision-list">
+              <div class="item">Expande alcance com um ativo já validado.</div>
+              <div class="item">Aumenta a chance de mais conversas em menos tempo.</div>
+              <div class="item">Permite duplicar anúncio e ganhar volume com controle.</div>
+            </div>
+            <div class="decision-foot">
+              Em português claro: quando o anúncio está funcionando, ficar parado demais é perder timing. Escalar com critério costuma ser o passo mais inteligente.
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="footer container fade-up">
+        <div class="footer-box">
+          <div>
+            <h3>Conclusão: o cenário é positivo e está vivo</h3>
+            <p>
+              Perfil otimizado. Seguidores crescendo. Conteúdo forte. Algoritmo entendendo o nicho. Conversas acontecendo. Custo abaixo da média. Criativo validado. Em resumo: a estrutura começou a responder. Agora o jogo é manter constância e decidir a velocidade da expansão.
+            </p>
+          </div>
+          <div class="footer-stats">
+            <div class="footer-pill"><span>Investimento já executado</span> <strong>R$ 305,00</strong></div>
+            <div class="footer-pill"><span>Orçamento diário atual</span> <strong>R$ 26/dia</strong></div>
+            <div class="footer-pill"><span>Reels com destaque</span> <strong>+6.000 views</strong></div>
+            <div class="footer-pill"><span>Outros conteúdos</span> <strong>+1.000 views</strong></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const formatNumber = (value) => new Intl.NumberFormat('pt-BR').format(Math.round(value));
+    const formatMoney = (value) => `R$ ${new Intl.NumberFormat('pt-BR', { minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(value)}`;
+
+    const counters = document.querySelectorAll('.counter');
+
+    const animateCounter = (el) => {
+      const target = Number(el.dataset.value || 0);
+      const prefix = el.dataset.prefix || '';
+      const suffix = el.dataset.suffix || '';
+      const isMoney = el.classList.contains('money');
+      const duration = 1600;
+      const start = performance.now();
+
+      const step = (now) => {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = target * eased;
+
+        if (isMoney) {
+          el.textContent = `${prefix}${formatMoney(current)}${suffix}`;
+        } else {
+          el.textContent = `${prefix}${formatNumber(current)}${suffix}`;
+        }
+
+        if (progress < 1) requestAnimationFrame(step);
+      };
+
+      requestAnimationFrame(step);
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          if (entry.target.classList.contains('counter') && !entry.target.dataset.animated) {
+            entry.target.dataset.animated = 'true';
+            animateCounter(entry.target);
+          }
+        }
+      });
+    }, { threshold: 0.18 });
+
+    document.querySelectorAll('.fade-up, .counter').forEach((el) => observer.observe(el));
+
+    document.querySelectorAll('a[href^="#"]').forEach((link) => {
+      link.addEventListener('click', (e) => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  </script>
 </body>
 </html>
